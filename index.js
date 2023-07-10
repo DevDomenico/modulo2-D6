@@ -54,9 +54,22 @@ function modificaImmagine() {
       singleImg.classList.toggle('modificaImmagine'); 
     }
   }
-modificaImmagine();
+//modificaImmagine();
 
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
 
-
+function cambiaColorePrezzi() {
+    const coloriDisponibili = ["red", "blue", "green", "yellow", "orange", "purple"];
+    const prezzi = document.querySelectorAll('.price');
+  
+    prezzi.forEach((prezzo) => {
+      const nuovoColore = coloriDisponibili[Math.floor(Math.random() * coloriDisponibili.length)];
+      prezzo.style.color = nuovoColore;
+    });
+  }
+  
+  // Esempio di utilizzo
+  cambiaColorePrezzi();
+  
+  
   
