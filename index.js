@@ -47,9 +47,16 @@ function modificaClasse (){
 //modificaClasse();
 
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
-function modificaImage() {
-    let immagini = document.querySelectorAll("image")
-    for ( i=0; i < immagini.length; i++){
-        immagini[i].classList.add("metto una nuova classe?")
+function modificaImmagine() {
+    let immagini = document.querySelectorAll(".image");
+    for (let i = 0; i < immagini.length; i++) {
+      const singleImg = immagini[i];
+      singleImg.classList.toggle('modificaImmagine'); 
     }
-}
+  }
+modificaImmagine();
+
+// ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
+
+
+  
